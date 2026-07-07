@@ -7,3 +7,11 @@ The CSF exists on the maximal time interval $[0, T)$ where $T = \tfrac{A_0}{2\pi
 :::
 
 A useful place to find information about the theorem is the [Wikipedia article on CSF](https://en.wikipedia.org/wiki/Curve-shortening_flow#Gage%E2%80%93Hamilton%E2%80%93Grayson_theorem)
+
+# Intuition, motivation
+
+# Huisken's distance comparison
+
+# Curvature bounds via distance comparison
+
+# Proof of Gage-Hamilton-Grayson's theorem
