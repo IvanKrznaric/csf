@@ -133,6 +133,35 @@ Unfortunately, this bound is not strong enough for what we are looking for since
 
 for $x \approx 0$. So, what we need to do is to try and refine the arguments from the Huisken's distance comparison, with the hopes of improving the lower bound on $d$.
 
+To that end, let's introduce a new object.
 
+:::{tip} Definition
+:icon: false
+Let $X : \mathbb{S}^1 \rightarrow \mathbb{R}^2$ be an embedding. The **chord-arc profile** of $X$ is the function $\psi_X : [0, \infty \rangle \rightarrow \mathbb{R}$ defined by
+
+\begin{equation*}
+\psi_X(z) = \inf \left\{ |X(y) - X(x)| : l(x,y) = z \right \}.
+\end{equation*}
+
+:::
+
+In some sense, the chord-arc profile allows us to register if a potential singularity might develop by scanning the curve and letting us know what is the smallest chord-distance between any two points on the curve with a given arc-length $z$.
+
+:::{danger} Proposition
+:icon: false
+Let $X : \mathbb{S}^1 \rightarrow \mathbb{R}^2$ be an embedding and let $C = \sup_{\mathbb{S}^1} |\kappa|$. Then for $z \approx 0$ the following approximation holds:
+
+\begin{equation*}
+\psi_X(z) = z - \frac{K^2}{24}z^3 + O(z^5).
+\end{equation*}
+:::
+
+Given a chord-arc profile of a curve, the result above tells us that we can simply see what's the maximum of the curvature by computing its Taylor expansion around $z_0 = 0$. Also, note that the chord-arc profile could be used to deduce our curvature bounds: suppose that we had a bound of the form $\psi_X \geq z - Cz^3$ for $z \approx 0$. Then for points $x,y$ on our curve with $l \approx 0$ we would have
+
+\begin{equation*}
+d \geq \psi_X(l) \geq l - Cl^3,
+\end{equation*}
+
+so in the same way as before we could deduce a bound $\kappa^2 \leq 24C$. So, what we now need to do is to obtain lower bounds on the chord-arc profile that are of the form mentioned above.
 
 # Proof of Gage-Hamilton-Grayson's theorem
