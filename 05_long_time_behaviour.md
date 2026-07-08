@@ -6,11 +6,13 @@
 The CSF exists on the maximal time interval $[0, T)$ where $T = \tfrac{A_0}{2\pi}$ where $A_0$ is the initial area. Upon rescaling to fix the total length, the CSF converges smoothly to a circle of total length $L_0$ as $t \to T$ where $L_0$ is the initial length.
 :::
 
-A useful place to find information about the theorem is the [Wikipedia article on CSF](https://en.wikipedia.org/wiki/Curve-shortening_flow#Gage%E2%80%93Hamilton%E2%80%93Grayson_theorem)
+A useful place to find information about the theorem is the [Wikipedia article on CSF](https://en.wikipedia.org/wiki/Curve-shortening_flow#Gage%E2%80%93Hamilton%E2%80%93Grayson_theorem).
 
-# Intuition, motivation
+The presentation of the proof mostly follows the proof from this [book](https://doi.org/10.1090/gsm/206)
 
-# Huisken's distance comparison
+## Intuition, motivation
+
+## Huisken's distance comparison
 
 One of the very important properties of the curve shortening flow in the plane is that the embeddedness is preserved during the flow. One way such a result can be stated is in the following form.
 
@@ -70,7 +72,7 @@ and so the supremum of $Z$ would be unbounded. Hence, if we manage to somehow ge
 Let $X : [0, T \rangle \times \mathbb{S}^1 \rightarrow \mathbb{R}^2$ be a solution of the curve shortening flow such that $X(0, \cdot)$ is an embedding. Then $\sup \left\{ Z(t,x,y) : x,y \in \mathbb{S}^1 \right \}$ is non-increasing in time.
 :::
 
-# Curvature bounds via distance comparison
+## Curvature bounds via distance comparison
 
 Recall that Gage-Hamilton-Grayson's theorem states that, in particular, the curve shortening flow of an embedded curve continues to exists as long as the total length of the curve is positive. We know that the extinction time of the flow is characterized by
 
@@ -164,4 +166,4 @@ d \geq \psi_X(l) \geq l - Cl^3,
 
 so in the same way as before we could deduce a bound $\kappa^2 \leq 24C$. So, what we now need to do is to obtain lower bounds on the chord-arc profile that are of the form mentioned above.
 
-# Proof of Gage-Hamilton-Grayson's theorem
+## Proof of Gage-Hamilton-Grayson's theorem
