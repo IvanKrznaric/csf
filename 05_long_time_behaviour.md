@@ -38,6 +38,7 @@ we are unable to use the curvature bounds to bound the distance $d$ using the sa
 In order to see what form of a bound we are looking for, we are going to consider one of the nicest solutions to the curve shortening flow - the shrinking circle. Looking at the figure below, and using the basic trig identities, it follows that for all points $x,y$ on the circle we have
 
 \begin{equation*}
+\label{eqn-trig}
 d = \frac{L}{\pi} \sin \left( \frac{\pi l}{L} \right),
 \end{equation*}
 
@@ -65,9 +66,73 @@ and so the supremum of $Z$ would be unbounded. Hence, if we manage to somehow ge
 
 :::{danger} Theorem (Huisken)
 :icon: false
+:label: thm-huisken
 Let $X : [0, T \rangle \times \mathbb{S}^1 \rightarrow \mathbb{R}^2$ be a solution of the curve shortening flow such that $X(0, \cdot)$ is an embedding. Then $\sup \left\{ Z(t,x,y) : x,y \in \mathbb{S}^1 \right \}$ is non-increasing in time.
 :::
 
 # Curvature bounds via distance comparison
+
+Recall that Gage-Hamilton-Grayson's theorem states that, in particular, the curve shortening flow of an embedded curve continues to exists as long as the total length of the curve is positive. We know that the extinction time of the flow is characterized by
+
+\begin{equation*}
+\limsup_{t \to T} \max_{\Gamma_t} \kappa = + \infty,
+\end{equation*}
+
+so one possible way forwards is to obtain bounds on curvature that hold as long as the total length of the curve is positive. 
+
+Curvature bounds can be obtained from the chord-distance $d$ - suppose that there is a point on the curve at which the curvature $\kappa$ is large. Around that point, the curve looks like a part of a circle with radius $1 / \kappa$. According to the [identity on the circle](#eqn-trig) we have computed before, we have the following approximation:
+
+\begin{equation*}
+d \approx \frac{2}{\kappa} \sin\left( \frac{\kappa l}{2} \right) \approx l - \frac{\kappa^2 l^3}{24},
+\end{equation*}
+
+where in the last line we have approximated the sine function with its degree $2$ Taylor polynomial. The main point of this simple approximation is that a large curvature can tell us something about the chord-distance. Motivated by this, let's suppose that we have a lower bound on the chord-distance of the form
+
+\begin{equation*}
+d(x,y) \geq \varphi(l(x,y)),
+\end{equation*}
+
+where $x,y$ are two points on the curve and $\varphi(x)$ satisfies
+
+\begin{equation*}
+\varphi(x) \geq x - Cx^3 + o(x^5)
+\end{equation*}
+
+for small $x$, i.e. $x \approx 0$. If such a bound were to hold, then we could control the curvature since given two points $x,y$ with $l(x,y) \approx 0$, we would have
+
+\begin{equation*}
+\begin{split}
+l - \frac{\kappa^2 l^3}{24} \approx d & \geq \varphi(l(x,y)) \geq l - C l^3 \\
+\implies \kappa^2 & \leq 24C
+\end{split}
+\end{equation*}
+
+so we would have a global control over the curvature. Therefore, the next thing we have to do is to obtain a lower-bound on $d$ of the form above.
+
+Let's note that we already know of at least one bound of the form $d \geq \varphi(l(x,y))$ and that's the bound from [Huisken's distance comparison](#thm-huisken): the supremum at time $t = 0$ is greater than $\pi$ so there exists some $n \in \mathbb{N}, n \geq 2$ such that $\sup \{Z(0,x,y) : x,y \in \mathbb{S}^1 \} \leq n\pi$, and since the supremum is non-increasing it follows that
+
+\begin{equation*}
+\begin{split}
+& Z \leq \sup \{Z(0,x,y) : x,y \in \mathbb{S}^1 \} \leq n\pi \\
+\implies & \frac{L}{d} \sin \left( \frac{\pi l}{L} \right) \leq n \pi \\
+\implies & d \geq \frac{cL}{\pi}\sin\left( \frac{\pi l}{L} \right),
+\end{split}
+\end{equation*}
+
+where we have denoted $c \coloneqq 1/n \in \langle 0,1 \rangle$. If we define $\varphi(x) \coloneqq \frac{cL}{\pi} \sin(\frac{\pi x}{L})$, then we have a bound
+
+\begin{equation*}
+d \geq \varphi(l).
+\end{equation*}
+
+Unfortunately, this bound is not strong enough for what we are looking for since
+
+\begin{equation*}
+\varphi(x) \approx cx
+\end{equation*}
+
+for $x \approx 0$. So, what we need to do is to try and refine the arguments from the Huisken's distance comparison, with the hopes of improving the lower bound on $d$.
+
+
 
 # Proof of Gage-Hamilton-Grayson's theorem
