@@ -8,7 +8,7 @@ The CSF exists on the maximal time interval $[0, T)$ where $T = \tfrac{A_0}{2\pi
 
 A useful place to find information about the theorem is the [Wikipedia article on CSF](https://en.wikipedia.org/wiki/Curve-shortening_flow#Gage%E2%80%93Hamilton%E2%80%93Grayson_theorem).
 
-The presentation of the proof mostly follows the proof from this [book](https://doi.org/10.1090/gsm/206)
+The presentation of the proof follows the proof from [this book](https://doi.org/10.1090/gsm/206) by Andrews, Chow, Guenther and Langford.
 
 ## Intuition, motivation
 
@@ -111,7 +111,7 @@ l - \frac{\kappa^2 l^3}{24} \approx d & \geq \varphi(l(x,y)) \geq l - C l^3 \\
 
 so we would have a global control over the curvature. Therefore, the next thing we have to do is to obtain a lower-bound on $d$ of the form above.
 
-Let's note that we already know of at least one bound of the form $d \geq \varphi(l(x,y))$ and that's the bound from [Huisken's distance comparison](#thm-huisken): the supremum at time $t = 0$ is greater than $\pi$ so there exists some $n \in \mathbb{N}, n \geq 2$ such that $\sup \{Z(0,x,y) : x,y \in \mathbb{S}^1 \} \leq n\pi$, and since the supremum is non-increasing it follows that
+Let's note that we already know of at least one bound of the form $d \geq \varphi(l(x,y))$ and that's the bound from [Huisken's distance comparison](#thm-huisken): it can be shown that the supremum at time $t = 0$ is greater than $\pi$ so there exists some $n \in \mathbb{N}, n \geq 2$ such that $\sup \{Z(0,x,y) : x,y \in \mathbb{S}^1 \} \leq n\pi$, and since the supremum is non-increasing it follows that
 
 \begin{equation*}
 \begin{split}
