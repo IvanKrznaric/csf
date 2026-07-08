@@ -27,7 +27,7 @@ The proof of the theorem goes along the following lines : since $\mathbb{S}^1$ i
 d(t,x,y) = \lvert X(t, y) - X(t,x) \rvert,
 \end{equation*}
 
-and we wish to show that $d$ is bounded from below by a positive constant. Such a lower bound can be shown using the maximum principle and curvature bounds (here we use the fact that we are working on a time interval of the form $[0, t_0]$).
+and we wish to show that $d$ is bounded from below by a positive constant for $x \neq y$. Such a lower bound can be shown using the maximum principle and curvature bounds (here we use the fact that we are working on a time interval of the form $[0, t_0]$).
 
 Therefore, it is apparent that the theorem above heavily relies on the curvature bounds along the flow, and that's also why the time interval is required to be of the form $[0, t_0]$. In some sense, this is a "short-time" result. If we are interested in long time behaviour of the curve shortening flow, a new approach is needed -- since the extinction time $T$ of the flow is characterized by
 
