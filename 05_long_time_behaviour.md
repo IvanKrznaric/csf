@@ -37,14 +37,23 @@ Therefore, it is apparent that the theorem above heavily relies on the curvature
 
 we are unable to use the curvature bounds to bound the distance $d$ using the same methods, and so we need to bound $d$ in some other way. This new approach to obtaining the said bounds is due to G. Huisken.
 
-In order to see what form of a bound we are looking for, we are going to consider one of the nicest solutions to the curve shortening flow - the shrinking circle. Looking at the figure below, and using the basic trig identities, it follows that for all points $x,y$ on the circle we have
+In order to see what form of a bound we are looking for, we are going to consider one of the nicest solutions to the curve shortening flow - the shrinking circle. Looking at [the figure below](#trig-circle), and using the basic trig identities, it follows that for all points $x,y$ on the circle we have
 
 \begin{equation*}
 \label{eqn-trig}
 d = \frac{L}{\pi} \sin \left( \frac{\pi l}{L} \right),
 \end{equation*}
 
-where $d$ is the chord-distane between $x$ and $y$, the arc-length between those two points is denoted by $l$, and $L$ is the circumference of the circle. In other words, the quantity
+where $d$ is the chord-distane between $x$ and $y$, the arc-length between those two points is denoted by $l$, and $L$ is the circumference of the circle. 
+
+:::{figure} ./figs/trig-circle.jpg
+:label: trig-circle
+:width: 450px
+
+The relationship between the chord-distance $d$ and arc-length $\ell$ between points $x$ and $y$ mentioned above can be deduced from this general configuration on the unit circle.
+:::
+
+In other words, the quantity
 
 \begin{equation*}
 Z = \frac{L}{d} \sin \left( \frac{\pi l}{L} \right)
